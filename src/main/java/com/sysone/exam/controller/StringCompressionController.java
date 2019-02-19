@@ -25,6 +25,11 @@ public class StringCompressionController {
 	public String obtainCandidate() {
 		return CANDIDATE;
 	}
+
+	@GetMapping("/")
+	public String index() {
+		return "Pagina de inicio<br><br>Las rutas posibles son:<br><br> GET => /candidate<br> POST => /compress";
+	}
 	
 	@PostMapping("/compress")
 	public ResComp compressString(@Valid @RequestBody ReqComp request) {
